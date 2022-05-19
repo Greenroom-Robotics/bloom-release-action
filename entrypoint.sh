@@ -30,6 +30,11 @@ then
   fi
 fi
 
+if [ ! -z "${INPUT_CUSTOM_SOURCE_LIST:-}" ]
+then
+  curl $INPUT_CUSTOM_SOURCE_LIST --create-dirs -o /etc/ros/rosdep/sources.list.d/30-custom.list
+fi
+
 pkgname=${INPUT_REPOSITORY:-$(basename ${GITHUB_REPOSITORY})}
 if [ $(find . -name package.xml | wc -l) -eq 1 ]
 then

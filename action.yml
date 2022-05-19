@@ -25,6 +25,8 @@ inputs:
     description: "Set true to open PR on ros/rosdistro automatically."
   debug_bloom:
     description: "Enable bloom debug output."
+  custom_source_list:
+    description: "Loads a custom list into /etc/ros/rosdep/sources.list.d"
 outputs:
   version:
     description: "Version of the created release on tag_and_release=true."
