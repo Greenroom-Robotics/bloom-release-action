@@ -52,6 +52,11 @@ rosdep update
 # Prepare bloom-release
 options=
 
+if [ ! -z "${INPUT_RELEASE_REPOSITORY_URL:-}" ]
+then
+  options="${options} --override-release-repository-url ${INPUT_RELEASE_REPOSITORY_URL}"
+fi
+
 if [ ! -z "${INPUT_RELEASE_REPOSITORY_PUSH_URL:-}" ]
 then
   options="${options} --override-release-repository-push-url ${INPUT_RELEASE_REPOSITORY_PUSH_URL}"

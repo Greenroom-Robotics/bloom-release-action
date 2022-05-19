@@ -17,6 +17,8 @@ inputs:
     required: true
   repository:
     description: "Override package repository name."
+  release_repository_url:
+    description: "Override release repository URL. Must be https."
   release_repository_push_url:
     description: "Override release repository push URL. Must be https."
   tag_and_release:
